@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ognjen Antonic Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single narrow column, a query-like header line, sections as labeled rows */
+:root{
+  --bg:#f6f7f8; --surface:#ffffff; --fg:#14181d; --muted:#5b6672; --line:#dde1e6; --accent:#0b6e6e;
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11151a;--surface:#181d23;--fg:#e8ecf0;--muted:#97a3ae;--line:#2a323b;--accent:#4cc3c0;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#11151a;--surface:#181d23;--fg:#e8ecf0;--muted:#97a3ae;--line:#2a323b;--accent:#4cc3c0;color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:56px 72px}
+.wrap{max-width:720px;margin:0 auto;display:grid;gap:48px}
+.q{font:500 13px/1 var(--mono);color:var(--accent);letter-spacing:.02em}
+h1{font:800 clamp(40px,8vw,64px)/1.02 var(--display);margin:14px 0 12px;letter-spacing:-.02em;text-wrap:balance}
+.role{font-size:18px;color:var(--muted);margin:0;max-width:60ch}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{font:500 14px/1 var(--mono);text-decoration:none;color:var(--fg);border:1px solid var(--line);background:var(--surface);padding:12px 16px;border-radius:6px}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.btn:hover{border-color:var(--accent)}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+section{display:grid;gap:16px}
+h2{font:500 12px/1 var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:0;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.feature{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:24px;display:grid;gap:10px}
+.feature h3{font:600 22px/1.2 var(--display);margin:0}
+.feature p{margin:0;color:var(--muted)}
+.feature a{color:var(--accent);font:500 14px var(--mono);text-decoration:none}
+.list{display:grid;gap:18px;margin:0;padding:0;list-style:none}
+.row{display:grid;grid-template-columns:150px 1fr;gap:16px}
+.row .when{font:400 13px/1.7 var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.row strong{font-weight:500;display:block}
+.row span{color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font:400 13px/1 var(--mono);border:1px solid var(--line);padding:8px 10px;border-radius:4px}
+footer{font:400 13px var(--mono);color:var(--muted)}
+@media (max-width:520px){.row{grid-template-columns:1fr;gap:2px}}
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <header>
+    <h1>Ognjen Antonic</h1>
+    <p class="role">Data Analyst and Data Engineer based in Austria. I turn raw data into pipelines, models and Power BI reports that people actually use.</p>
+    <div class="links">
+      <a class="btn primary" href="https://app.powerbi.com/view?r=eyJrIjoiYTYzM2FhNGUtMzE0ZS00ODgyLWFiNjUtMjI3NDBhNWI1NTNmIiwidCI6IjAwNDY2ZWI4LWQ2NWItNGY5Ni04YTI3LWU2YWNkNzJhMTRhNiJ9" target="_blank" rel="noopener">Power BI Report</a>
+      <a class="btn" href="https://github.com/ogicode" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Featured</h2>
+    <div class="feature">
+      <h3>Interactive Power BI Report</h3>
+      <p>A live, published report built on a PostgreSQL (Neon) backend with a modeled dataset, DAX measures and custom SVG cards.</p>
+      <a href="https://app.powerbi.com/view?r=eyJrIjoiYTYzM2FhNGUtMzE0ZS00ODgyLWFiNjUtMjI3NDBhNWI1NTNmIiwidCI6IjAwNDY2ZWI4LWQ2NWItNGY5Ni04YTI3LWU2YWNkNzJhMTRhNiJ9" target="_blank" rel="noopener">Open report &rarr;</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <ul class="list">
+      <li class="row"><div class="when">Power BI</div><div><strong>HR People Intelligence Dashboard</strong><span>Synthetic HR data in Postgres, star schema, published Power BI report.</span></div></li>
+      <li class="row"><div class="when">Power BI</div><div><strong>AI Token Spend and ROI</strong><span>Three page report tracking AI token cost against productivity gains.</span></div></li>
+      <li class="row"><div class="when">Engineering</div><div><strong>Local Docker Data Stack</strong><span>Airflow orchestrating loads into PostgreSQL, reported in Power BI.</span></div></li>
+      <li class="row"><div class="when">Engineering</div><div><strong>PySpark Pipeline</strong><span>Spark, SeaweedFS object storage and Airflow, all in Docker.</span></div></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <ul class="list">
+      <li class="row"><div class="when">2025 to 2026</div><div><strong>Siemens Energy</strong><span>Data Analyst</span></div></li>
+      <li class="row"><div class="when">2023 to 2024</div><div><strong>Siemens Real Estate</strong><span>Data Analyst</span></div></li>
+      <li class="row"><div class="when">Award</div><div><strong>LEC Data Challenge</strong><span>First place</span></div></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Stack</h2>
+    <div class="tags">
+      <span>SQL</span><span>Python</span><span>PostgreSQL</span><span>Snowflake</span><span>Power BI</span><span>DAX</span><span>Tableau</span><span>Airflow</span><span>Docker</span><span>PySpark</span><span>Alteryx</span><span>Power Automate</span><span>Azure</span><span>GCP</span><span>SAP</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Languages</h2>
+    <div class="tags"><span>German</span><span>English</span><span>Bosnian / Croatian / Serbian</span></div>
+  </section>
+
+  <footer>github.com/ogicode</footer>
+</main>
+</body>
+</html>
